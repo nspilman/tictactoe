@@ -4,17 +4,24 @@ body{
     justify-content: center;
     flex-direction: column;
     height:100vh;
+    background-image: url('https://source.unsplash.com/random');
+    background-size: 100%;
+
 }
 
 #board{
     display:flex;
     flex-direction: column;
+    background-color: rgb(255,255,255,.7)
 }
 
 #gameover{
     display: none;
     flex-direction: column;
     align-items: center;
+    background-color: rgb(255,255,255,.7);
+    padding:1em;
+    margin:1em;
 
 }
 

@@ -22,17 +22,12 @@ const gameoverDiv = document.querySelector('#gameover');
 const gameoverText = gameoverDiv.querySelector('#gameoverText');
 const newGameButton = gameoverDiv.querySelector('#newGameButton');
 
+// Initial game settings
+
 var turn = "X";
 var gameover = false;
 
-const updateTurn = () =>{
-    if (turn == "X"){
-        turn = "O";
-    }
-    else{
-        turn = "X";
-    }
-}
+// Winning combinations
 
 winningCombinations = [
     [row1col1,row1col2,row1col3],
@@ -46,6 +41,16 @@ winningCombinations = [
 ]
 
 cells = [row1col1,row1col2, row1col3, row2col1, row2col2, row2col3,row3col1,row3col2,row3col3]
+
+
+const updateTurn = () =>{
+    if (turn == "X"){
+        turn = "O";
+    }
+    else{
+        turn = "X";
+    }
+}
 
 const checkWin = () => {
     for(let i =0; i < winningCombinations.length; i++){
